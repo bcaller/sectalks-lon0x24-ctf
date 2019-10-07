@@ -1,0 +1,28 @@
+<html><head>
+<title>Flag checker</title>
+<style>body * {font-size: larger;}</style>
+</head><body><script>
+function check(guess) {
+  return WebAssembly.instantiateStreaming(fetch('flag.wasm'))
+    .then(obj => {
+      if(obj.instance.exports.chkLn(guess.length)) {
+        if(!guess.split("").find((c, i) => obj.instance.exports.chkChr(i, c.charCodeAt(0)) == 0)) {
+          return true
+        }
+      }
+      return false
+    });
+}
+function docheck() {
+  document.getElementById("btn").disabled = true
+  check(document.getElementById("flag").value).then(result => {
+    document.getElementById("btn").disabled = false;
+    alert(result ? "Yeah! You got the flag!" : "Denied")
+  })
+  return false;
+}
+</script>
+<form>
+<input type="text" id="flag" /><button id="btn" type="submit" formaction="javascript:docheck()">Check flag</button>
+</form>
+</body></html>
