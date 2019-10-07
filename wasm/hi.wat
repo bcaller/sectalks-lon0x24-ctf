@@ -1,5 +1,5 @@
 (module
-  (table 23 funcref)
+  (table 25 funcref)
   (func $_a (param $i i32) (result i32)
     local.get $i
     i32.const 97
@@ -28,9 +28,9 @@
     local.get $i
     i32.const 103
     i32.eq)
-  (func $_h (param $i i32) (result i32)
+  (func $_o (param $i i32) (result i32) ;; h & o switched
     local.get $i
-    i32.const 104
+    i32.const 111
     i32.eq)
   (func $_i (param $i i32) (result i32)
     local.get $i
@@ -56,9 +56,9 @@
     local.get $i
     i32.const 110
     i32.eq)
-  (func $_o (param $i i32) (result i32)
+  (func $_h (param $i i32) (result i32)
     local.get $i
-    i32.const 111
+    i32.const 104
     i32.eq)
   (func $_p (param $i i32) (result i32)
     local.get $i
@@ -121,11 +121,11 @@
       (br $top)
     ))
     (unreachable))
-  (elem (i32.const 0) $_f $_l $_a $_g $fopen $_a $_s $_s $_e $_m $_b $_l $_e $funderscore $_t $_h $_i $_s $funderscore $_y $_o $fclose $fendlesspunishment)
+  (elem (i32.const 0) $_f $_l $_a $_g $fopen $_a $_s $_s $_e $_m $_b $_l $_e $funderscore $_o $_o $_z $_y $funderscore $_h $_a $_z $_e $fclose $fendlesspunishment)
   (type $return_i32 (func (param $char i32) (result i32)))
   (func $punish
     (local $speedbump i64)
-    (set_local $speedbump (i64.const 9898989898))
+    (set_local $speedbump (i64.const 45454545454))
     (block $break (loop $top
       (br_if $break (i64.eqz (tee_local $speedbump
         (i64.sub (get_local $speedbump) (i64.const 1)))))
@@ -133,7 +133,7 @@
     )))
   (func (export "chkLn") (param $i i32) (result i32)
     local.get $i
-    i32.const 22
+    i32.const 24
     i32.eq)
   (func (export "chkChr") (param $i i32) (param $char i32) (result i32)
     local.get $char
