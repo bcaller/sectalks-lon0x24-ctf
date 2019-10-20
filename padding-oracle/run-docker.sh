@@ -13,7 +13,7 @@ docker create \
   --name $NAME \
   $NAME
 docker start $NAME
-docker exec -it $NAME python /encrypt.py
+docker exec -it $NAME python /encrypt.py | tee flag.enc
 
 docker ps
 
