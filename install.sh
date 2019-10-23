@@ -25,7 +25,7 @@ REDOS_FLAG="flag{div1ded_bloods_z1ng}" REGEX_ID=1 MAXCHARS=4321 ./run-docker.sh 
 
 (
 cd hindenburger;
-AWS_ACCESS_KEY_ID=AKIA44B5FUJP7G4UJW6L AWS_SECRET_ACCESS_KEY="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" ./run-docker.sh 44024;
+AWS_DEFAULT_REGION=eu-west-2 AWS_ACCESS_KEY_ID=AKIA44B5FUJP7G4UJW6L AWS_SECRET_ACCESS_KEY="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" ./run-docker.sh 44024;
 SHIRO_FLAG="flag{syllabifying_oblate_misrepresentations}" ./run-docker-shiro.sh 44025
 )
 
