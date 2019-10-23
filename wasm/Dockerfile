@@ -1,7 +1,7 @@
 FROM node:12-alpine
 WORKDIR /wabt
 RUN apk --no-cache add build-base cmake git python \
- && git clone --depth 1 --recursive https://github.com/WebAssembly/wabt /wabt \
+ && git clone --recursive https://github.com/WebAssembly/wabt /wabt \
  && mkdir build \
  && cd build \
  && cmake .. \
