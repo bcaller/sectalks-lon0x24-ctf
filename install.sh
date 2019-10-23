@@ -14,7 +14,7 @@ STATUS_CODE_FLAG="flag{d0wn_tH3_r4bb1t_wH0l3}" ./run-docker.sh 44020
 
 (
 cd padding-oracle;
-ORACLE_KEY="2J2HYJzwNB2HbVc6jS4q2Cm2" ORACLE_FLAG="flag{innuendo_denominator_unmasked}" ./run-docker.sh 44021
+ORACLE_KEY="2J2HYJzwNB2HbVc6jS4q2Cm2" ORACLE_FLAG="flag{c0rks_denominator_unmasked}" ./run-docker.sh 44021
 )
 
 (
