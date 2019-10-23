@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
+set -u
 NAME=$(basename $(pwd))
+CNAME="$NAME$REGEX_ID"
 
-docker stop $NAME
-docker rm $NAME
+docker stop $CNAME
+docker rm $CNAME
 
 docker build . -t $NAME
 docker create \
@@ -11,9 +13,9 @@ docker create \
   -e REDOS_FLAG \
   -e REGEX_ID \
   -e MAXCHARS \
-  --name $NAME \
+  --name $CNAME \
   $NAME
-docker start $NAME
+docker start $CNAME
 
 docker ps
 
