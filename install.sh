@@ -23,4 +23,10 @@ REDOS_FLAG="flag{stilted_hitchhik3r_yells}" REGEX_ID=0 MAXCHARS=300 ./run-docker
 REDOS_FLAG="flag{div1ded_bloods_z1ng}" REGEX_ID=1 MAXCHARS=4321 ./run-docker.sh 44023
 )
 
+(
+cd hindenburger;
+AWS_ACCESS_KEY_ID=AKIA44B5FUJP7G4UJW6L AWS_SECRET_ACCESS_KEY="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" ./run-docker.sh 44024;
+SHIRO_FLAG="flag{syllabifying_oblate_misrepresentations}" ./run-docker-shiro.sh 44025
+)
+
 rm ctf.zip

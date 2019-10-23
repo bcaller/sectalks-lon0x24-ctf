@@ -1,0 +1,4 @@
+FROM hindenburger
+
+RUN mv conf/shiro.ini.template conf/shiro.ini && \
+    sed -e "/user. =.*/d" -e "s/#admin =.*/admin = sjdX789ljsdlfj, admin/" -i conf/shiro.ini
