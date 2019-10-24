@@ -29,5 +29,13 @@ def make_flag():
         return to_hangul(f.read() + os.environ["HANGUL_FLAG"])
 
 
+def decode_flag():
+    with open("flag.enc") as f:
+        return from_hangul(f.read())
+
+
 if __name__ == '__main__':
-    print(make_flag(), end='')
+    if 'HANGUL_FLAG' in os.environ:
+        print(make_flag(), end='')
+    else:
+        print(decode_flag())
