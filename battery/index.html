@@ -1,0 +1,31 @@
+<html><head>
+<title>碼亂堆一是這</title>
+<style type="text/css">
+body { font-size: 300%; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js" integrity="sha256-xoJklEMhY9dP0n54rQEaE9VeRnBEHNSfyfHlKkr9KNk=" crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+navigator.getBattery().then(function(battery) {
+  const x = document.title;
+  const y = battery.charging ? x : x.split("").reverse().join("");
+  const z = y.repeat(Math.floor(battery.level * 100) + 1);
+  const result = CryptoJS.AES.decrypt("U2FsdGVkX1+2fTBPl2iuwYtXCz1+APnuSFwPCJxeIjeyNYOho+t8AHpZrAAnpjvI", z);
+  document.body.innerHTML = result.sigBytes > 27 ? result.toString() : "<marquee scrollamount=10>Insecure battery level (" + (battery.level * 100) + "%)</marquee>";
+})
+document.addEventListener('contextmenu', event => { alert("NOPE"); return event.preventDefault() });
+setInterval(() => {
+  console.clear();
+  console.log("%cTOP SECRET. Don't log stuff please. [%s]", "color:white; background-color:white; font-size: xx-large;", new Date())
+}, 200)
+let div = document.createElement('div');
+Object.defineProperty(div, "id", {get: () => {
+  alert("Dev Tools detected!"); if(Math.random() > 0.6) {debugger;}
+}});
+let loop = setInterval(() => {
+    console.log(div);
+}, 5000);
+</script>
+</body>
+</html>
