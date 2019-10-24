@@ -1,0 +1,5 @@
+FROM ubuntu:16.04
+
+RUN adduser --uid 1234 --disabled-password --gecos '' guest
+
+WORKDIR /home/guest
