@@ -11,3 +11,4 @@ RUN apk --no-cache add build-base cmake git python \
  && mv /wabt/build/* /wabt-bin \
  && rm -rf /wabt
 COPY check.js /check.js
+COPY validate-wasm-flag.js /validate-wasm-flag.js

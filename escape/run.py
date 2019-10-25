@@ -12,7 +12,7 @@ with tempfile.TemporaryDirectory() as tmpdir:
         "--rm",
         "--user", "guest",
         "-it",
-        "-v" "{}:/home/guest".format(tmpdir),
+        "-v", "{}:/home/guest".format(tmpdir),
         "escape",
         "/bin/bash",
     ])

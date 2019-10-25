@@ -55,7 +55,6 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
             except ValueError as e:
                 self.wfile.write(b"ERROR\nError decrypting message\n\n\n")
             else:
-                print(result)
                 if FLAG in result:
                     self.wfile.write(b"\nMESSAGE STORED!\n\n\n")
                 else:
