@@ -6,6 +6,7 @@ sudo usermod -a -G docker ec2-user
 
 # aws s3 cp s3://bc-ctf/ctf.zip ctf.zip
 # unzip ctf.zip
+sudo route add -host 169.254.169.254 reject
 
 (
 cd http-status-code;

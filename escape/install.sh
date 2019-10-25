@@ -1,3 +1,4 @@
+route add -host 169.254.169.254 reject
 echo "${ESCAPE_FLAG:-flag{c0ntainers_AR3nt_VMs\}}" > /flag.txt
 yum -y update
 yum -y install xinetd docker python36
