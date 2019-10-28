@@ -7,5 +7,5 @@ if [ ${#ATTEMPT} -le $MAXCHARS ]; then
   export ATTEMPT
   time eval /app.py $REGEX_ID $REDOS_FLAG
 else
-  echo "Cannot only accept $MAXCHARS characters :("
+  echo "Can only accept $MAXCHARS characters :("
 fi
